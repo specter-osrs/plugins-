@@ -13,7 +13,10 @@ allprojects {
         }
         mavenCentral()
         jcenter()
+        maven { url 'https://maven.google.com' } // Add this for Google dependencies
     }
+}
+
 
     def runeLiteVersion = 'latest.release'
 
@@ -25,9 +28,11 @@ allprojects {
             testImplementation 'junit:junit:4.12'
             testImplementation group: 'net.runelite', name: 'client', version: runeLiteVersion
             testImplementation group: 'net.runelite', name: 'jshell', version: runeLiteVersion
+
         }
+
     }
-}
+
 
 dependencies {
     implementation project(path: ':AutoTitheFarm')

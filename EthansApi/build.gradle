@@ -5,7 +5,9 @@ plugins {
 dependencies {
     implementation 'org.json:json:20230227'
     implementation 'org.roaringbitmap:RoaringBitmap:0.9.44'
-    implementation("com.google.archivepatcher:archive-patch-applier:1.0.4")
+
+    compileOnly 'net.runelite.archive-patcher:archive-patcher-applier:1.2'
+    implementation 'net.runelite.archive-patcher:archive-patcher-applier:1.2'
     implementation("org.benf:cfr:0.152")
 }
 
